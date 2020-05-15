@@ -1,3 +1,6 @@
 [submodule "Purchase-Order-App-django"]
 	path = Purchase-Order-App-django
 	url = https://github.com/Githambo/Purchase-Order-App-django
+[submodule "Fixed-Asset-Manager-Django"]
+	path = Fixed-Asset-Manager-Django
+	url = https://github.com/Githambo/Fixed-Asset-Manager-Django
