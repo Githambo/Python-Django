@@ -1,0 +1,55 @@
+
+	
+
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"
+		  content="width=device-width,initial-scale=1,shrink-to-fit=no">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" crossorigin="anonymous">
+	<title>	
+	{% block title%}
+	     MyMDB
+	{%endblock%}	
+	</title>
+	<style>
+		.mymdb-masthead{
+			background-color: #EEEEEE;
+			margin-bottom: 1em;
+
+		}
+	</style>
+</head>
+<body>
+	<div class="mymdb-masthead">
+		<div class ="container">
+			<nav class="nav">
+				<div class="navbar-brand">
+					<a class="nav-link" href="{% url 'main:index' %}">homepage</a>
+										
+				</div>
+				<a class="nav-link" href="{% url 'main:student-list' %}">student</a>
+				
+			</nav>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-8 mymdb-main">
+				{% block main%}
+					<a href="{% url 'main:add-student' %}"> Add New Student</a><br><br>
+					<a href="{% url 'main:student-list'%}">All Students</a><br><br>
+					<a href="{% url 'main:tk'%}">Launch Tkinter</a>
+				{%endblock%}
+				
+			</div>
+			
+				
+		</div>
+	</div>
+
+</body>
+</html>

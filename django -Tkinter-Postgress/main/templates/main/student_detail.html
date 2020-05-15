@@ -1,0 +1,32 @@
+{%extends 'base.html'%}
+
+{%block title%}
+{%endblock%}
+
+{%block main%}
+<style type="text/css">
+	table,td,th{
+  border: 1px solid;
+
+}
+
+
+}
+</style>
+	<table style="width: 100%">
+		<tr>
+			<th>REGISTRATION NUMBER</th>
+			<th>FIRST NAME</th>
+			<th>SECOND NAME</th>			
+			<th>COURSE</th>
+		</tr>
+		
+		<tr>
+			<td>{{object.ref_number}}</td>
+			<td>{{object.first_name}}</td>
+			<td>{{object.second_name}}</td>			
+			<td>{{object.course}}</td>
+		</tr>		
+	</table>
+	<a class="btn btn-primary" href="{% url 'main:student-update' object.id%}">Update</a>&nbsp;&nbsp;
+{%endblock%}

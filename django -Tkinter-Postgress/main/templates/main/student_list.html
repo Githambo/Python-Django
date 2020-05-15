@@ -1,0 +1,30 @@
+{%extends 'base.html'%}
+
+{%block title%}
+{%endblock%}
+
+{%block main%}
+<style type="text/css">
+	table,td,th{
+		border: 1px solid
+	}
+	
+
+</style>
+	<table style="width:100%">
+		<tr>
+			<th>REGISTRATION NUMBER</th>
+			<th>FIRST NAME</th>
+			<th>SECOND NAME</th>			
+			<th>COURSE</th>
+		</tr>
+		{% for student in object_list %}
+		<tr>
+			<td><a href="{% url 'main:student-detail' student.id%}">{{student.ref_number}}</a></td>
+			<td>{{student.first_name}}</td>
+			<td>{{student.second_name}}</td>			
+			<td>{{student.course}}</td>
+		</tr>
+		{%endfor%}
+	</table>
+{%endblock%}
