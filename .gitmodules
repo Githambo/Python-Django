@@ -1,0 +1,3 @@
+[submodule "Purchase-Order-App-django"]
+	path = Purchase-Order-App-django
+	url = https://github.com/Githambo/Purchase-Order-App-django
